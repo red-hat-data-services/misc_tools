@@ -1,0 +1,42 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: opendatahub-operator
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: opendatahub-operator
+  template:
+    metadata:
+      labels:
+        name: opendatahub-operator
+    spec:
+      serviceAccountName: opendatahub-operator
+      containers:
+        - name: opendatahub-operator
+          # Replace this with the built image name
+          image: quay.io/modh/odh-operator-image:latest
+          command:
+          - opendatahub-operator
+          imagePullPolicy: Always
+          env:
+            - name: WATCH_NAMESPACE
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.namespace
+            - name: POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+            - name: OPERATOR_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+        - name: opendatahub-deployer
+          command:
+          - /deploy.sh
+          image: quay.io/modh/odh-deployer:v0.9.1
+          imagePullPolicy: Always
+          restartPolicy: OnFailure
+
