@@ -33,10 +33,11 @@ spec:
               valueFrom:
                 fieldRef:
                   fieldPath: metadata.name
+      initContainers:
         - name: opendatahub-deployer
           command:
           - /deploy.sh
-          image: quay.io/modh/odh-deployer:v0.9.1
+          image: quay.io/modh/odh-deployer:v0.9
           imagePullPolicy: Always
           restartPolicy: OnFailure
 
