@@ -5,7 +5,7 @@ metadata:
 subjects:
 - kind: ServiceAccount
   name: opendatahub-operator
-  namespace: optest # Replace it with operator's namespace
+  namespace: redhat-rhods # Replace it with operator's namespace
 roleRef:
   kind: ClusterRole
   name: cluster-admin
