@@ -8,3 +8,4 @@ oc delete -f service_account.yaml -n redhat-rhods
 oc delete project opendatahub --force --grace-period=0
 oc delete project redhat-rhods --force --grace-period=0
 oc delete crd kfdefs.kfdef.apps.kubeflow.org
+oc delete project redhat-odh-monitoring --force --grace-period=0
