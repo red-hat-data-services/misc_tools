@@ -1,6 +1,8 @@
 echo "Make sure you are logged in as kubeadmin"
 
-oc new-project redhat-rhods
+ODS_OPERATOR_PROJECT=${ODS_OPERATOR_NAMESPACE:-"redhat-ods-operator"}
+
+oc new-project $ODS_OPERATOR_PROJECT
 oc create -f service_account.yaml
 oc create -f role.yaml
 oc create -f cluster_role_binding.yaml
