@@ -1,5 +1,3 @@
-# modhsample
+Note: When using this you will see some "Error" messages. These are normal to see while the install
+process creates the required namespaces.  After approximately 30 seconds, your install should proceed.
 
-Quick and dirty set of files for running a MODH instance against any 4.x cluster
-
-You'll need to be logged-in as cluster admin for any of this to work
