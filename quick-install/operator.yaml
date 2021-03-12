@@ -16,7 +16,7 @@ spec:
       containers:
         - name: opendatahub-operator
           # Replace this with the built image name
-          image: quay.io/modh/odh-operator-image:v1.0.2
+          image: quay.io/modh/odh-operator-image:v1.0.4
           command:
           - opendatahub-operator
           imagePullPolicy: Always
@@ -37,7 +37,7 @@ spec:
         - name: opendatahub-deployer
           command:
           - ./deploy.sh
-          image: quay.io/modh/odh-deployer:v1.0.2
+          image: quay.io/modh/odh-deployer:v1.0.4
           imagePullPolicy: Always
           restartPolicy: OnFailure
 
