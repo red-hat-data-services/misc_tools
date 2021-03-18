@@ -13,7 +13,7 @@ items:
       namespace: openshift-marketplace
     spec:
       displayName: Managed Open Data Hub Operator
-      image: quay.io/croberts/modh-104:latest
+      image: quay.io/croberts/modh:v105
       publisher: OSD Red Hat Addons
       sourceType: grpc
   - apiVersion: operators.coreos.com/v1alpha2
