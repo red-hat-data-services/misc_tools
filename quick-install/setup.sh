@@ -20,7 +20,6 @@ function oc::wait::object::availability() {
         fi
         sleep $interval
     done
-    echo $token
 }
 
 
