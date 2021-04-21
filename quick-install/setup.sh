@@ -1,3 +1,5 @@
+#! /bin/bash
+
 function oc::wait::object::availability() {
     local cmd=$1 # Command whose output we require
     local interval=$2 # How many seconds to sleep between tries
