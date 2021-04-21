@@ -1,3 +1,5 @@
+#! /bin/bash
+
 oc delete -f catalogsource.yaml
 oc delete -f fakesecret.yaml
 oc delete kfdef opendatahub -n redhat-ods-applications --force --grace-period=0 &
